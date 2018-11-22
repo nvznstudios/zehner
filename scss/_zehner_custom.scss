@@ -248,30 +248,44 @@ a{
 	padding: 50px 0;
 	h4{
 		margin-bottom: 1rem;
+
+		@include breakpoint( small down ){
+			margin-top: 50px;
+		}
 	}
-	.newsletter{
-		text-align: center;
-		.newsletter-signup-form{
-			margin-bottom: 50px;
-			input{
-				display: inline-block;
-				max-width: 256px;
-				margin: 0;
-				vertical-align: middle;
+
+	.cell{
+		&:first-of-type{
+			@include breakpoint( small down ){
+				margin-top: 0;
 			}
-			.button{
-				display: inline-block;
-				margin: 0;
-				// padding-left: 2rem;
-				// padding-right: 2rem;
-				margin-left: 1rem;
+		}
+		.newsletter{
+			text-align: center;
+			.newsletter-signup-form{
+				margin-bottom: 50px;
+				input{
+					display: inline-block;
+					max-width: 256px;
+					margin: 0;
+					vertical-align: middle;
+				}
+				.button{
+					display: inline-block;
+					margin: 0;
+					// padding-left: 2rem;
+					// padding-right: 2rem;
+					margin-left: 1rem;
+				}
 			}
 		}
 	}
+
 	.footer-menu{
 		list-style-type: none;
 		padding: 0;
 		margin: 0;
+
 		li{
 			a{
 
@@ -304,6 +318,7 @@ a{
 		margin: 0;
 		padding: 0;
 		list-style-type: none;
+
 		li{
 			display: inline-block;
 			margin: 0 1rem;
